@@ -1,37 +1,16 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import './pass-input.css';
+import './css/pass-input.css';
+import criteriasTemplate from './password-rules';
 
-const criteriasTemplate = {
-    'nstart-end-space': {
-        'warningMsg': 'Password cannot start or end with a space.',
-        'regex': new RegExp('^[^\\s]*[^\\s]$')
-    },
-    'include-lower': {
-        'warningMsg': 'Please include a lower case letter.',
-        'regex': new RegExp('[a-z]')
-    },
-    'include-upper': {
-        'warningMsg': 'Please include a upper case letter.',
-        'regex': new RegExp('[A-Z]')
-    },
-    'include-number': {
-        'warningMsg': 'Please include a number.',
-        'regex': new RegExp('[0-9]')
-    },
-    'length-limit': {
-        'warningMsg': 'Password length must inside 9-50.',
-        'regex': new RegExp('^.{9,50}$')
-    },
-};
 
 class PassInput extends React.Component {
     constructor(props) {
         super(props);
         this.state = { password: '', warningMsg: '' };
         this.handleOnChange = this.handleOnChange.bind(this);
-        let minLength = Number.isInteger(props.config['length-min']) ? props.config['length-min'] : 9;
-        let maxLength = Number.isInteger(props.config['length-max']) ? props.config['length-max'] : 50;
+        let minLength = props.config['length-min'] || 9;
+        let maxLength = props.config['length-max'] || 50;
 
         // Set criterias based on config
         this.criterias = criteriasTemplate;
@@ -61,7 +40,7 @@ class PassInput extends React.Component {
     }
 
     render() {
-        if (this.state.warningMsg !== '') {
+        if (this.state.warningMsg) {
             return (
                 <div className='form-group'>
                     <label className='text-danger'>New Password*</label>
