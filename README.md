@@ -8,7 +8,7 @@
 * Example
 ```
 let passInputConf = {
-    'disabled': ['nstart-end-space', 'include-lower',
+    'disabled': ['nstart-end-space', 'include-lower'],
     'length-min': 3,
     'length-max': 10
 };
