@@ -13,11 +13,11 @@ class PassInput extends React.Component {
         let maxLength = props.config['length-max'] || 50;
 
         // Set criterias based on config
-        this.criterias = criteriasTemplate;
-        if (props.config['disabled']) {
+        this.criterias = Object.assign({}, criteriasTemplate);
+        if (props.config['disabled'] && props.config['disabled'].length != 0) {
             props.config['disabled'].forEach(x => { delete this.criterias[x] });
         }
-
+        
         this.criterias["length-limit"] = {
             'warningMsg': 'Password length must inside ' + minLength + '-' + maxLength + '.',
             'regex': new RegExp('^.{' + minLength + ',' + maxLength + '}$')

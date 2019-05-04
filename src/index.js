@@ -17,7 +17,7 @@ let userInput = (
     <div className='user-input'>
         <h3>Basic Password Input</h3>
         <PassInput config={passInputConf} />
-        <br/>
+        <br />
     </div>
 );
 
@@ -29,7 +29,7 @@ let testCustomInput = (
     <div className='custom-input'>
         <h3>HOC Password Custom Input</h3>
         <CustomInputWithPassCheck config={passInputConf} />
-        <br/>
+        <br />
     </div>
 );
 
@@ -41,7 +41,7 @@ let testCustomTextarea = (
     <div className='custom-textarea'>
         <h3>HOC Password CustomTextarea</h3>
         <CustomTextareaWithPassCheck config={passInputConf} />
-        <br/>
+        <br />
     </div>
 );
 

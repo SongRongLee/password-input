@@ -1,7 +1,7 @@
 const criteriasTemplate = {
     'nstart-end-space': {
         'warningMsg': 'Password cannot start or end with a space.',
-        'regex': new RegExp('^[^\\s]*[^\\s]$')
+        'regex': new RegExp('^(?=\\S).+(?<=[^\\s])$')
     },
     'include-lower': {
         'warningMsg': 'Please include a lower case letter.',
