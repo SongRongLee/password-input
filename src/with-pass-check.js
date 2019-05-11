@@ -14,7 +14,7 @@ function withPassCheck(WrappedComponent) {
 
             // Set criterias based on config
             this.criterias = Object.assign({}, criteriasTemplate);
-            if (props.config['disabled'] && props.config['disabled'].length != 0) {
+            if (props.config['disabled'] && props.config['disabled'].length !== 0) {
                 props.config['disabled'].forEach(x => { delete this.criterias[x] });
             }
 
