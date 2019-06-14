@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import criteriasTemplate from './password-rules';
+import criteriasTemplate from './passwordRules';
 
 function withPassCheck(WrappedComponent) {
 

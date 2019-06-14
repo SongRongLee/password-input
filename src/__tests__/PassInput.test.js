@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import PassInput from '../pass-input';
+import PassInput from '../PassInput';
 
 describe('initialize', () => {
     it('renders without config props', () => {

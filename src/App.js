@@ -1,8 +1,8 @@
 import React from 'react';
-import PassInput from './pass-input';
-import withPassCheck from './with-pass-check';
-import CustomInput from './custom-input';
-import CustomTextArea from './custom-textarea';
+import PassInput from './PassInput';
+import withPassCheck from './withPassCheck';
+import CustomInput from './CustomInput';
+import CustomTextArea from './CustomTextArea';
 
 export default function App() {
     let passInputConf = {

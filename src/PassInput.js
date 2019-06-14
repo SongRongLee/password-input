@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import './css/pass-input.css';
-import criteriasTemplate from './password-rules';
+import './css/PassInput.css';
+import criteriasTemplate from './passwordRules';
 
 
 class PassInput extends React.Component {
